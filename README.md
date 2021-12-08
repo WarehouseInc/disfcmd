@@ -4,7 +4,7 @@ A hybrid batch script between Windows SFC and DISM to try and repair your Window
 # WARNING
 This product has not been tested thoroughly. Do not run it on your main PC as it may brick your Windows installation.
 
-I am not viable for any damage caused by running this tool on your main PC.
+I am not viable for any damage caused by running this tool.
 
 # Mechanism
 Runs `dism /online /cleanup-image /restorehealth` first. 
