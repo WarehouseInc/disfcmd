@@ -13,6 +13,8 @@ SET /P AREYOUSURE=SFC has finished repairing your system files. Do you want to r
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 shutdown -r -t 0
 )
+if not errorlevel 0
+echo Sorry, but SFC didn't manage to repair one or all of your files. You'll have to manually reboot your computer in Safe Mode then try running SFC again.
 )
 )
 if not errorlevel 0
