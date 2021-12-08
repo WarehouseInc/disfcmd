@@ -7,6 +7,8 @@ This product has not been tested thoroughly. Do not run it on your main PC as it
 I am not viable for any damage caused by running this tool.
 
 # Mechanism
+Remember to create a restore point before this operation.
+
 Runs `dism /online /cleanup-image /restorehealth` first. 
 
 If successful, moves to `sfc /scannow`. If SFC fails, the tool suggests the user to try rebooting the computer into Safe Mode then run SFC again.
