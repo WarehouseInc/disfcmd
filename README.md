@@ -1,16 +1,22 @@
 # disfcmd
 A hybrid batch script between Windows SFC and DISM to try and repair your Windows system files.
 
-The batch script will try to run dism /online /cleanup-image /restorehealth first, if successful it'll move to sfc /scannow and prompt you to reboot your computer if needed.
+# WARNING
+This product has not been tested thoroughly. Do not run it on your main PC as it may brick your Windows installation.
 
-If the repair fails, you can try manually running the MSDT troubleshooter for the WU client.
+I am not viable for any damage caused by running this tool on your main PC.
 
-If the troubleshooter fails too, you have an option of restoring the component store through a Windows WIM image.
+# Mechanism
+Runs `dism /online /cleanup-image /restorehealth` first. 
 
-Still, this script is incomplete. I always appreciate any feedback for this script.
+If successful, moves to `sfc /scannow`. If SFC fails, the tool suggests the user to try rebooting the computer into Safe Mode then run SFC again.
 
-Note that this is still an experimental tool and has not been fully tested.
+But if DISM failed to repair the component store at the beginning, the tool will suggest the user to run the Windows Update Troubleshooter. If the troubleshooter also fails, the tool will prompt the user to use a Windows installation image as an offline repair source for DISM-as a last resort. The user will then enter the directory of the `install.wim` image inside the installation media. 
 
-Do not run it on your main PC as it may brick your Windows installation. I am not viable for any damage caused by running this tool on your main PC.
+DISM will attempt the repair operation. If this final method fails, this tool is declared to have done its best and nothing further can be done.
 
-You have been warned.
+# Feedback and consistency
+
+This tool is incomplete. Why not? Well it's quite a rush in my homework as a batch script. Thus, I always welcome any feedback for this tool.
+
+You can contact me through my email and I'll start an issue in this repository.
