@@ -15,10 +15,9 @@ If successful, moves to `sfc /scannow`. If SFC fails, the tool suggests the user
 
 But if DISM failed to repair the component store at the beginning, the tool will suggest the user to run the Windows Update Troubleshooter. If the troubleshooter also fails, the tool will prompt the user to use a Windows installation image as an offline repair source for DISM-as a last resort. The user will then enter the directory of the `install.wim` image inside the installation media. 
 
-DISM will attempt the repair operation. If this final method fails, this tool is declared to have done its best and nothing further can be done.
+DISM will attempt the repair operation. If this final method fails, this tool is declared to have done its best and you can't benefit any further from it.
 
 # Feedback and consistency
-
 This tool is incomplete. Why not? Well it's quite a rush in my homework as a batch script. Thus, I always welcome any feedback for this tool.
 
 You can contact me through my email and I'll start an issue in this repository.
