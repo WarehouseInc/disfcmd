@@ -1,10 +1,7 @@
-# disfcmd
-A hybrid batch script between Windows SFC and DISM to try and repair your Windows system files.
-
 # WARNING
 This product has not been tested thoroughly. Do not run it on your main PC as it may brick your Windows installation.
 
-I am not viable for any damage caused by running this tool.
+The Licensor gives no warranty that the Premises is legally or physically fit for the Permitted Use.
 
 # Mechanism
 Remember to create a restore point before this operation.
@@ -18,6 +15,4 @@ But if DISM failed to repair the component store at the beginning, the tool will
 DISM will attempt the repair operation. If this final method fails, this tool is declared to have done its best and you can't benefit any further from it.
 
 # Feedback and consistency
-This tool is incomplete. Why not? Well it's quite a rush in my homework as a batch script. Thus, I always welcome any feedback for this tool.
-
-You can contact me through my email and I'll start an issue in this repository.
+Well this tool was my homework as a batch script and was born out of inspiration, so no updates are guaranteed-I mean, why though? If there's a bug just open an issue in the repository.
