@@ -1,16 +1,17 @@
-# WARNING
-This product has not been tested thoroughly. Do not run it on your main PC as it may brick your Windows installation.
+# Disclaimer: Untested product
 
-# Mechanism
-Remember to create a restore point before this operation.
+This product has not undergone rigorous testing and I am not liable for any damage it causes on any environment or platform. Use with caution.
 
-Runs `dism /online /cleanup-image /restorehealth` first. 
+# Why does this exist?
 
-If successful, moves to `sfc /scannow`. If SFC fails, the tool suggests the user to try rebooting the computer into Safe Mode then run SFC again.
+Well, nothing more than 14 year old me programming in batch for the first time. I'd lose interest over time and now this is nothing more than a showcase.
 
-But if DISM failed to repair the component store at the beginning, the tool will suggest the user to run the Windows Update Troubleshooter. If the troubleshooter also fails, the tool will prompt the user to use a Windows installation image as an offline repair source for DISM as a last resort. The user will then enter the directory of the `install.wim` image inside the installation media. 
+# What does it do? 
 
-DISM will attempt the repair operation. If this final method fails, it is recommended to do a clean install as system files can no longer be reliably replaced.
+Runs `dism /online /cleanup-image /restorehealth`. Proceeds to run `sfc /scannow` if image is successfully repaired, otherwise prompts a reboot into Safe Mode for an SFC retry.
 
-# Feedback and consistency
-Well this tool was my homework as a batch script and was born out of inspiration, so no updates are guaranteed. I mean, why though? If there's a bug just open an issue in the repository.
+If image is irreparable, prompts the user to run the WU troubleshooter. Using the installation image is possible as a last resort. If all else fails, Windows reinstallation is highly recommended.
+
+# Is this still maintained?
+
+No, it is a public archive. Forward all questions to my work email and I'll try my best to address them.
